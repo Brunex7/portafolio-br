@@ -36,11 +36,11 @@ const Landing = () => {
           height: '100%',
           zIndex: -1,
           filter: 'blur(100px)',
-          background: `url(${fondo}) center center/cover`,
+          background: `url(${fondo}) 100% 100% no-repeat`,
         }}
       />
       <Container
-        maxWidth="sm"
+        maxWidth="xs"
         sx={{ 
           display: 'flex', 
           alignItems: 'center', 
@@ -97,4 +97,3 @@ const Landing = () => {
 };
 
 export default Landing;
-
