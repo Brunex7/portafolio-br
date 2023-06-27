@@ -2,12 +2,19 @@ import { Box, Button, Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import fotoP from '../assets/fotoPerfil.png';
 import { Link } from 'react-router-dom';
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function About() {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   useEffect(() => {
     setImageLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -28,7 +35,7 @@ function About() {
       >
         <Box sx={{ flex: '0 0 auto' }}>
           <img
-            style={{ borderRadius: '18px', width: '100%', maxWidth: '300px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s' }}
+            style={{ borderRadius: '18px', width: '100%', maxWidth: '350px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s' }}
             onLoad={() => setImageLoaded(true)}
             src={fotoP}
             alt='foto perfil'
@@ -41,6 +48,34 @@ function About() {
           <Typography variant='h5' align='left'>
             Full Stack Developer & Ux/Ui Designer
           </Typography>
+          <Container sx={{ display: 'flex', mt:'10px' }}>
+          <Button
+          startIcon={<CloudDownloadIcon />}
+            sx={{
+              backgroundColor: '#750404',
+              color: 'white',
+              marginLeft:'-20px',
+              '&:hover': {
+                backgroundColor: 'white',
+                color:'#750404'
+              },
+            }}>
+              Download CV
+          </Button>
+          <Button
+          startIcon={<CloudDownloadIcon />}
+            sx={{
+              backgroundColor: '#750404',
+              color: 'white',
+              marginLeft:'20px',
+              '&:hover': {
+                backgroundColor: 'white',
+                color:'#750404'
+              },
+            }}>
+              Download Porfolio
+          </Button>
+        </Container>
         </Box>
       </Box>
       <Box sx={{ display: 'flex', flexDirection: 'column', color:'white', mt:'30px',  opacity: imageLoaded ? 1 : 0, transition: 'opacity 3.0s'}}>
@@ -55,6 +90,7 @@ function About() {
           </Typography>
         <Container sx={{ display: 'flex', justifyContent: 'flex-start', mt:'50px' }}>
           <Button
+          startIcon={<ArrowBackIosIcon />}
             sx={{
               backgroundColor: 'none',
               color: 'white',
@@ -69,6 +105,7 @@ function About() {
         </Container>
         <Container sx={{ display: 'flex', justifyContent: 'flex-end', mt:'-35px'}}>
           <Button
+          endIcon={<ArrowForwardIosIcon />}
             sx={{
                 backgroundColor: 'none',
                 color: 'white',

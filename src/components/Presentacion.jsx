@@ -1,6 +1,7 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function Presentacion() {
 
@@ -27,6 +28,7 @@ function Presentacion() {
       </Container>
       <Container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
         <Button
+          endIcon={<ArrowForwardIosIcon />}
           sx={{
             backgroundColor: 'none',
             color: 'white',

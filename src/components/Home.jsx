@@ -2,6 +2,8 @@ import { Box, Button, Container, Grid, Typography } from '@mui/material';
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import images from '../media/Images';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 
 function Home() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -9,6 +11,10 @@ function Home() {
 
   useEffect(() => {
     setImageLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
   }, []);
 
   return (
@@ -21,12 +27,16 @@ function Home() {
         </Container>
       </Box>
       <div style={{ margin: '50px 8%', maxWidth: '1150px' }}>
+        <Typography variant='h3' color={'white'} sx={{opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s'}}>
+          Here you can see some of my best designs as a graphic designer.
+        </Typography>
         <Grid
           container
           style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
             gridGap: '30px',
+            marginTop:'50px'
           }}
         >
           {images.map((image, index) => (
@@ -81,11 +91,9 @@ function Home() {
             </Grid>
           ))}
         </Grid>
-        <Typography variant='h3' color={'white'} marginTop={'40px'}sx={{opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s'}}>
-          Here you can see some of my best designs as a graphic designer.
-        </Typography>
         <Container sx={{ display: 'flex', justifyContent: 'flex-end', mt:'50px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 2.0s'}}>
           <Button
+            endIcon={<ArrowForwardIosIcon />}
             sx={{
               backgroundColor: 'none',
               color: 'white',
