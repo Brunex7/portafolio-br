@@ -86,7 +86,7 @@ const Landing = () => {
           opacity: imageLoaded ? 1 : 0, 
           transition: 'opacity 5.0s',
           '@media (max-width: 600px)': {
-            mt:-6,
+            mt:-35,
           },
         }}
       >
