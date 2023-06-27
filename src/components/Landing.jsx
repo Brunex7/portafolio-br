@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
-import fondo from '../assets/fondo.svg';
 import Presentacion from './Presentacion';
 import { Link } from 'react-scroll';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
@@ -16,17 +15,21 @@ const Landing = () => {
   return (
     <>
     <Box
-    sx={{
-    position: 'relative',
-    mx: 'auto',
-    p: {
-      xs: 2,
-      sm: 2,
-      md: 2,
-    },
-    minHeight: '800px',
-    zIndex: 0, // Ajusta el valor de zIndex a un número más alto
-    }}>
+      sx={{
+        position: 'relative',
+        mx: 'auto',
+        p: {
+          xs: 2,
+          sm: 5,
+          md: 2,
+        },
+          minHeight: '800px',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+      }}
+    >
       <div
         style={{
           position: 'absolute',
@@ -36,7 +39,7 @@ const Landing = () => {
           height: '100%',
           zIndex: -1,
           filter: 'blur(100px)',
-          background: `url(${fondo}) 100% 100% no-repeat`,
+          background: `url(https://res.cloudinary.com/dammsykk2/image/upload/v1687902343/fondo_qzwlun.jpg) center center/cover`,
         }}
       />
       <Container
@@ -49,10 +52,27 @@ const Landing = () => {
           position: 'relative', 
           zIndex: 1, 
           opacity: imageLoaded ? 1 : 0, 
-          transition: 'opacity 3.0s'
+          transition: 'opacity 3.0s',
+          '@media (max-width: 600px)': {
+            maxWidth: '100%',
+            padding: '0 16px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: '100vh',
+          }
         }}
       >
-        <Typography variant="h1" align="center" color="white">
+        <Typography 
+          variant="h1" 
+          align="center" 
+          color="white" 
+          sx={{
+            '@media (max-width: 600px)': {
+              fontSize: '48px',
+            },
+          }}>
           WELCOME
         </Typography>
       </Container>
