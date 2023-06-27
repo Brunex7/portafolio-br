@@ -6,8 +6,9 @@ import primate from '../assets/Logo primate.jpg';
 import postres from '../assets/postres mym.jpg';
 import sand from '../assets/sandwich mym.jpg';
 import folleto from '../assets/folleto MyM 2.jpg';
-import phone from '../assets/phoneCase.jpg';
+
 import cade from '../assets/DF cadete.jpg';
+
 const images = [
   {
     url: make,
@@ -41,10 +42,7 @@ const images = [
     url: folleto,
     title: 'Image 7',
   },
-  {
-    url: phone,
-    title: 'Image 7',
-  },
+ 
   {
     url: cade,
     title: 'Image 7',
