@@ -103,7 +103,7 @@ function About() {
             Back to Portfolio
           </Button>
         </Container>
-        <Container sx={{ display: 'flex', justifyContent: 'flex-end', mt:'-35px'}}>
+        <Container sx={{ display: 'flex', justifyContent: 'flex-end'}}>
           <Button
           endIcon={<ArrowForwardIosIcon />}
             sx={{
