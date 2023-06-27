@@ -16,17 +16,17 @@ const Landing = () => {
   return (
     <>
     <Box
-      sx={{
-        position: 'relative',
-        mx: 'auto',
-        p: {
-          xs: 2,
-          sm: 5,
-          md: 2,
-        },
-        minHeight: '800px',
-      }}
-    >
+    sx={{
+    position: 'relative',
+    mx: 'auto',
+    p: {
+      xs: 2,
+      sm: 2,
+      md: 2,
+    },
+    minHeight: '800px',
+    zIndex: 0, // Ajusta el valor de zIndex a un número más alto
+    }}>
       <div
         style={{
           position: 'absolute',
