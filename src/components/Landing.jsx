@@ -69,26 +69,10 @@ const Landing = () => {
           color="white" 
           sx={{
             '@media (max-width: 600px)': {
-              fontSize: '48px',
+              fontSize: '70px',
             },
           }}>
           WELCOME
-        </Typography>
-      </Container>
-      <Container 
-        sx={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          justifyContent: 'center', 
-          mt: -35, 
-          position: 'relative', 
-          zIndex: 1,
-          opacity: imageLoaded ? 1 : 0, 
-          transition: 'opacity 4.0s'
-        }}
-      >
-        <Typography variant="h6" align="center" color="white">
-          to my portfolio
         </Typography>
       </Container>
       <Container 
@@ -96,16 +80,20 @@ const Landing = () => {
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center', 
-          mt:20, 
+          mt:-10, 
           position: 'relative', 
           zIndex: 1,
           opacity: imageLoaded ? 1 : 0, 
-          transition: 'opacity 5.0s'
+          transition: 'opacity 5.0s',
+          '@media (max-width: 600px)': {
+            mt:-6,
+          },
         }}
       >
-        <Button sx={{ backgroundColor: 'none', color: 'white'}}>
+        <Button  sx={{ backgroundColor: 'none', color: 'white', height:'60px'}}>
           <Link to='presentacion' className='link' smooth>
-            <ExpandMoreIcon style={{fontSize:'xxx-large'}}/>
+            <Typography variant='body2'>to my portfolio</Typography>
+            <ExpandMoreIcon style={{fontSize:'xx-large'}}/>
           </Link>
         </Button>
       </Container>
