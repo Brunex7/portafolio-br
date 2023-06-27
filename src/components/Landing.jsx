@@ -3,6 +3,7 @@ import { Box, Button, Container, Typography } from '@mui/material';
 import Presentacion from './Presentacion';
 import { Link } from 'react-scroll';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import fondo from '../assets/fondo.svg';
 
 
 const Landing = () => {
@@ -39,7 +40,7 @@ const Landing = () => {
           height: '100%',
           zIndex: -1,
           filter: 'blur(100px)',
-          background: `url(https://i.pinimg.com/564x/9a/9b/14/9a9b14e21b8285baae931250c6b92723.jpg) center center/cover`,
+          background: `url(${fondo}) center center/cover`,
         }}
       />
       <Container
