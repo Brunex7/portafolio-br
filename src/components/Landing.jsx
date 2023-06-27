@@ -39,7 +39,7 @@ const Landing = () => {
           height: '100%',
           zIndex: -1,
           filter: 'blur(100px)',
-          background: `url(https://res.cloudinary.com/dammsykk2/image/upload/v1687902343/fondo_qzwlun.jpg) center center/cover`,
+          background: `url(https://i.pinimg.com/564x/9a/9b/14/9a9b14e21b8285baae931250c6b92723.jpg) center center/cover`,
         }}
       />
       <Container
