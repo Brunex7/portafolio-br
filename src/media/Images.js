@@ -9,47 +9,57 @@ import folleto from '../assets/folleto MyM 2.jpeg';
 import phone from '../assets/PhoneCase.jpeg';
 import cade from '../assets/DF cadete.jpeg';
 
-const images = [
-  {
-    url: make,
-    title: 'Image 1',
-  },
-  {
-    url: mont,
-    title: 'Image 2',
-  },
-  {
+const imagesGroup = [
+  [
+      {
+        url: make,
+        title: 'STICKER BY ROOT',
+        description:'Sticker designed for Root.bl (clothing brand) with their slogan and collection logo.'
+      },
+      {
+        url: mont,
+        title: 'STICKER BY ROOT',
+      description:'Sticker desingned for Root.bl (clothing brand) capturing its essence.'
+    },
+    {
     url: basc,
-    title: 'Image 3',
-  },
-  {
+    title: 'STICKER BY ROOT',
+    description:'Sticker designed for Root.bl (clothing brand) with their collection logo.'
+    },
+    {
     url: min,
-    title: 'Image 4',
-  },
+    title: 'STICKER BY ROOT',
+    description:'Sticker designed for Root.bl (clothing brand) with their collection logo Minimalist.'
+    },
+],
+[
   {
     url: primate,
-    title: 'Image 5',
+    title: 'LOGO PRIMATE',
   },
+],[
   {
     url: postres,
-    title: 'Image 6',
+    title: 'FLYER MYM',
   },
   {
     url: sand,
-    title: 'Image 7',
+    title: 'FLYER MYM',
   },
   {
     url: folleto,
-    title: 'Image 7',
+    title: 'MYM BROUCHURE',
   },
+],[
   {
     url: phone,
-    title: 'Image 7',
+    title: 'FLYER PHONECASE',
   },
   {
     url: cade,
-    title: 'Image 7',
+    title: 'FLYER DF STORE',
   },
+  ]
 ];
 
-export default images
+export default imagesGroup
