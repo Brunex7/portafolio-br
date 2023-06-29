@@ -7,6 +7,16 @@ import { Link as ScrollLink} from 'react-scroll';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
+const styles = {
+  container: {
+    position: 'fixed',
+    left: '80%', // Ajusta la posición derecha según tus necesidades
+    top: '90%', // Ajusta la posición vertical según tus necesidades
+    transform: 'translateY(-50%)', // Centra verticalmente el botón
+    zIndex: '999', // Asegura que el botón esté por encima del contenido
+  },
+};
+
 const Projects = () => {
 
    const [imageLoaded, setImageLoaded] = useState(false);
@@ -119,9 +129,10 @@ const Projects = () => {
             Back to About Me
           </Button>
         </Container>
-        <Container sx={{ display: 'flex', justifyContent: 'flex-end', mt: '-35px' }}>
+        <Container sx={styles.container}>
           <Button
             sx={{
+              borderRadius:'40px',
               backgroundColor: 'none',
               color: 'white',
               '&:hover': {
