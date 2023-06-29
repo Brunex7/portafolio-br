@@ -50,6 +50,8 @@ function About() {
           </Typography>
           <Container sx={{ display: 'flex', mt:'10px' }}>
           <Button
+          href='../RomeroBrunoCv.pdf'
+          download
           startIcon={<CloudDownloadIcon />}
             sx={{
               backgroundColor: '#750404',
@@ -63,6 +65,8 @@ function About() {
               Download CV
           </Button>
           <Button
+          href='../Portafolio.pdf'
+          download
           startIcon={<CloudDownloadIcon />}
             sx={{
               backgroundColor: '#750404',
