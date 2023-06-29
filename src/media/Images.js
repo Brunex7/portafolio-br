@@ -38,41 +38,41 @@ const imagesGroup = [
 [
   {
     url: primate,
-    title: 'LOGO PRIMATE',
+    title: 'LOGOS',
   },
   {
     url: br,
-    title: 'LOGO PRIMATE',
+    title: 'LOGOS',
   },
   {
     url: root,
-    title: 'LOGO PRIMATE',
+    title: 'LOGOS',
   },
   {
     url: bl,
-    title: 'LOGO PRIMATE',
+    title: 'LOGOS',
   },
 ],[
   {
     url: postres,
-    title: 'FLYER MYM',
+    title: 'FOOD FLYER',
   },
   {
     url: sand,
-    title: 'FLYER MYM',
+    title: 'FOOD FLYER',
   },
   {
     url: folleto,
-    title: 'MYM BROUCHURE',
+    title: 'FOOD FLYER',
   },
 ],[
   {
     url: phone,
-    title: 'FLYER PHONECASE',
+    title: 'TECHNOLOGY FLYER',
   },
   {
     url: cade,
-    title: 'FLYER DF STORE',
+    title: 'TECHNOLOGY FLYER',
   },
   ]
 ];
