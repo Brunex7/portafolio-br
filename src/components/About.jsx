@@ -35,13 +35,13 @@ function About() {
       >
         <Box sx={{ flex: '0 0 auto' }}>
           <img
-            style={{ borderRadius: '18px', width: '100%', maxWidth: '350px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s' }}
+            style={{ borderRadius: '18px', width: '100%', maxWidth: '350px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 3.0s' }}
             onLoad={() => setImageLoaded(true)}
             src={fotoP}
             alt='foto perfil'
           />
         </Box>
-        <Box sx={{ color: '#ffff',ml:{md:'30px', xs:'0px'}, mt: { xs: '5%', md: '0' }, opacity: imageLoaded ? 1 : 0, transition: 'opacity 3.0s' }}>
+        <Box sx={{ color: '#ffff',ml:{md:'30px', xs:'0px'}, mt: { xs: '5%', md: '0' }, opacity: imageLoaded ? 1 : 0, transition: 'opacity 4.0s' }}>
           <Typography variant='h1' align='left'>
             Bruno Romero
           </Typography>
