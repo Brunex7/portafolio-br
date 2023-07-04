@@ -14,36 +14,17 @@ import root from '../assets/logo root.jpeg';
 
 const imagesGroup = [
   [
-      {
-        url: make,
-        title: 'STICKER BY ROOT',
-        description:'Sticker designed for Root.bl (clothing brand) with their slogan and collection logo.'
-      },
-      {
-        url: mont,
-        title: 'STICKER BY ROOT',
+    {
+      url: mont,
+      title: 'STICKER BY ROOT',
       description:'Sticker desingned for Root.bl (clothing brand) capturing its essence.'
     },
     {
-    url: basc,
-    title: 'STICKER BY ROOT',
-    description:'Sticker designed for Root.bl (clothing brand) with their collection logo.'
-    },
-    {
-    url: min,
-    title: 'STICKER BY ROOT',
-    description:'Sticker designed for Root.bl (clothing brand) with their collection logo Minimalist.'
+      url: cade,
+      title: 'TECHNOLOGY FLYER',
     },
 ],
 [
-  {
-    url: primate,
-    title: 'LOGOS',
-  },
-  {
-    url: br,
-    title: 'LOGOS',
-  },
   {
     url: root,
     title: 'LOGOS',
@@ -54,15 +35,11 @@ const imagesGroup = [
   },
 ],[
   {
-    url: postres,
-    title: 'FOOD FLYER',
+    url: primate,
+    title: 'LOGOS',
   },
   {
     url: sand,
-    title: 'FOOD FLYER',
-  },
-  {
-    url: folleto,
     title: 'FOOD FLYER',
   },
 ],[
@@ -71,8 +48,8 @@ const imagesGroup = [
     title: 'TECHNOLOGY FLYER',
   },
   {
-    url: cade,
-    title: 'TECHNOLOGY FLYER',
+    url: br,
+    title: 'LOGOS',
   },
   ]
 ];

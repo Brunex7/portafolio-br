@@ -26,21 +26,6 @@ function Presentacion() {
           I'm a Full Stack Developer & UX/UI Designer.
         </Typography>
       </Container>
-      <Container sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-        <Button
-          endIcon={<ArrowForwardIosIcon />}
-          sx={{
-            backgroundColor: 'none',
-            color: 'white',
-            '&:hover': {
-              backgroundColor: '#750404',
-            },
-          }}
-          component={Link} to='/home'
-        >
-          Go to Portfolio
-        </Button>
-      </Container>
     </Box>
   );
 }

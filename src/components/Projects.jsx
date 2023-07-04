@@ -5,7 +5,7 @@ import Footer from './Footer';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 
 const styles = {
   container: {
@@ -52,13 +52,13 @@ const Projects = () => {
     <>
       <style>{cardAnimation}</style>
       <Box>
-        <Container sx={{ color: '#ffff', padding: '20px' }}>
+        <Container sx={{ color: '#000000', padding: '20px' }}>
           <Typography variant='h4' align='left'>
             Projects
           </Typography>
         </Container>
       </Box>
-      <div style={{ margin: '50px 8%', maxWidth: '1150px' }}>
+      <Container style={{ margin: '50px 8%', maxWidth: '1150px',height:'auto', backgroundColor:'#101010', borderRadius:'55px',p:'60px' }}>
         <Grid container spacing={2} justifyContent="center" style={{ display: 'flex', flexWrap: 'wrap' }}>
           {projects.map((project, index) => (
             <Grid item key={index} xs={12} sm={6} md={4} style={{ animationDelay: `${index * 0.1}s`,opacity: imageLoaded ? 1 : 0, transition: 'opacity 1.0s' }}>
@@ -114,21 +114,6 @@ const Projects = () => {
             </Grid>
           ))}
         </Grid>
-        <Container sx={{ display: 'flex', justifyContent: 'flex-start', mt: '80px' }}>
-          <Button
-            startIcon={<ArrowBackIosIcon />}
-            sx={{
-              backgroundColor: 'none',
-              color: 'white',
-              '&:hover': {
-                backgroundColor: '#750404',
-              },
-            }}
-            component={RouterLink} to='/about'
-          >
-            Back to About Me
-          </Button>
-        </Container>
         <Container sx={styles.container}>
           <Button
             sx={{
@@ -145,7 +130,7 @@ const Projects = () => {
             </ScrollLink>
           </Button>
         </Container>
-      </div>
+      </Container>
       <Footer />
     </>
   );
