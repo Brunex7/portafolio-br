@@ -1,15 +1,15 @@
-import { Box, Button, Container, Typography } from '@mui/material';
 import React from 'react';
-import { Link } from 'react-router-dom';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box, Container, Typography } from '@mui/material';
 
 function Presentacion() {
+  const containerStyle = {
+    marginTop: '50px',
+  };
 
   return (
     <Box
       id='presentacion'
       sx={{
-        width: '97%',
         height: '100%',
         backgroundColor: 'black',
         color: 'white',
@@ -17,7 +17,7 @@ function Presentacion() {
       }}
     >
       <Container>
-        <Typography variant='h5' align='left' marginTop={'50px'}>
+        <Typography variant='h5' align='left' sx={containerStyle}>
           Bruno Romero
         </Typography>
       </Container>

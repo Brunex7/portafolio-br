@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import imagesGroup from '../media/Images';
-import { Grid, Typography } from '@mui/material';
+import { Grid } from '@mui/material';
 
 function ImageGallery() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    setImageLoaded(true);
-  }, []);
 
   return (
     <Grid
@@ -17,10 +12,14 @@ function ImageGallery() {
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
         gridGap: '30px',
         marginTop: '50px',
+        marginLeft: 'auto',
+        marginRight: 'auto',
+        paddingLeft: '30px',
+        paddingRight: '30px',
       }}
     >
       {imagesGroup.map((subGroup, subGroupIndex) => (
-        <Grid item xs={12} key={subGroupIndex} sx={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 4.0s' }}>
+        <Grid item xs={12} key={subGroupIndex}>
           {subGroup.map((image, index) => (
             <div
               key={index}
@@ -49,5 +48,3 @@ function ImageGallery() {
 }
 
 export default ImageGallery;
-
-  

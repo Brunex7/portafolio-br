@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import NavFloating from "./components/NavFloating";
 
 function App() {
 
@@ -13,12 +14,15 @@ function App() {
   }, []);
 
   return (
-    <>
-      <Landing />
-      <About />
-      <Home />
-      <Projects />
-    </>
+    <div>
+      <NavFloating />
+      <div>
+        <Landing />
+        <About />
+        <Home />
+        <Projects />
+      </div>
+    </div>
   );
 }
 
