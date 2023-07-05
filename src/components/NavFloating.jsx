@@ -27,7 +27,7 @@ const NavFloating = () => {
       sx={{
         position: 'fixed',
         borderRadius: '10px',
-        width: '40%',
+        width: '50%',
         height: '5%',
         left: '50%',
         bottom:'2%',
@@ -36,21 +36,22 @@ const NavFloating = () => {
         display: isVisible ? 'block' : 'none',
         backgroundColor: '#00130a6f',
         backdropFilter: 'blur(5px)',
-        boxShadow: '2px 1px 10px rgba(0, 0, 0, 0.8)',
+        boxShadow: '2px 1px 10px rgba(73, 73, 73, 0.8)',
         padding: '16px',
+        justifyContent:'space-around'
       }}
     >
-      <Link to='landing'>
-        <HomeIcon />
+      <Link to='landing'  className="link" smooth>
+        <HomeIcon  color="#ffffff"/>
       </Link>
-      <Link to='about'> 
-        <PersonIcon /> 
+      <Link to='about' className="link" smooth> 
+        <PersonIcon color="#ffffff"/> 
       </Link>
-      <Link to='desing'>
-        <DesignServicesIcon />
+      <Link to='desing' className="link" smooth>
+        <DesignServicesIcon color="#ffffff"/>
       </Link>
-      <Link to='project'>
-        <WorkIcon />
+      <Link to='project' className="link" smooth>
+        <WorkIcon color="#ffffff"/>
       </Link>
     </Box>
   );

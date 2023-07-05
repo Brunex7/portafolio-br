@@ -70,7 +70,7 @@ const Landing = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            mt: -10,
+            mt: -6,
             position: 'relative',
             zIndex: 1,
             opacity: imageLoaded ? 1 : 0,
