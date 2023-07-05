@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { useEffect, useState } from "react";
 
 import WorkIcon from '@mui/icons-material/Work';
@@ -38,21 +38,23 @@ const NavFloating = () => {
         backdropFilter: 'blur(5px)',
         boxShadow: '2px 1px 10px rgba(73, 73, 73, 0.8)',
         padding: '16px',
-        justifyContent:'space-around'
+        cursor:'pointer'
       }}
     >
-      <Link to='landing'  className="link" smooth>
-        <HomeIcon  color="#ffffff"/>
-      </Link>
-      <Link to='about' className="link" smooth> 
-        <PersonIcon color="#ffffff"/> 
-      </Link>
-      <Link to='desing' className="link" smooth>
-        <DesignServicesIcon color="#ffffff"/>
-      </Link>
-      <Link to='project' className="link" smooth>
-        <WorkIcon color="#ffffff"/>
-      </Link>
+     <Stack direction="row" spacing={2} justifyContent="space-around" alignItems="center" color={'#ffffff'}>
+        <Link to="landing" className="link" smooth>
+          <HomeIcon />
+        </Link>
+        <Link to="about" className="link" smooth> 
+          <PersonIcon /> 
+        </Link>
+        <Link to="desing" className="link" smooth>
+          <DesignServicesIcon />
+        </Link>
+        <Link to="project" className="link" smooth>
+          <WorkIcon />
+        </Link>
+      </Stack>
     </Box>
   );
 };
