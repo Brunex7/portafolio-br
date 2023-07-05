@@ -15,7 +15,8 @@ const Landing = () => {
 
   return (
     <>
-      <Box
+      <Box 
+        id='landing'
         sx={{
           position: 'relative',
           mx: 'auto',

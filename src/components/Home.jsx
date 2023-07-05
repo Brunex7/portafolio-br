@@ -9,7 +9,7 @@ function Home() {
   }, []);
 
   return (
-    <Box>
+    <Box id='desing'>
       <Container sx={{ color: '#000000', padding: '20px' }}>
         <Typography variant='h4' align='left'>
           Portfolio Highlights

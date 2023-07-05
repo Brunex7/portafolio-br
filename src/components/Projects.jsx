@@ -65,7 +65,7 @@ const Projects = () => {
   return (
     <>
       <style>{cardAnimation}</style>
-      <Box>
+      <Box id ='project'>
         <Container sx={{ color: '#000000', padding: '20px' }}>
           <Typography variant='h4' align='left'>
             Projects

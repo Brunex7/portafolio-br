@@ -1,50 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Toolbar, IconButton } from '@mui/material';
-import { Link, animateScroll as scroll } from 'react-scroll';
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { Box } from "@mui/material";
+import { useEffect, useState } from "react";
 
-const FloatingNavBar = () => {
-  const [isVisible, setIsVisible] = useState(true);
+import WorkIcon from '@mui/icons-material/Work';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person';
+import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import { Link } from "react-scroll";
 
-  const handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-
-    if (scrollTop > 100) {
-      setIsVisible(false);
-    } else {
-      setIsVisible(true);
-    }
-  };
+const NavFloating = () => {
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsVisible(scrollTop > 0);
+    };
 
+    window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
   return (
-    <AppBar position="fixed" sx={{ opacity: isVisible ? 1 : 0, transition: 'opacity 0.3s' }}>
-      <Toolbar>
-        <Link to="top" smooth={true} duration={500}>
-          <IconButton
-            color="inherit"
-            aria-label="Scroll to top"
-            onClick={scrollToTop}
-            sx={{ display: isVisible ? 'none' : 'block' }}
-          >
-            <KeyboardArrowUpIcon />
-          </IconButton>
-        </Link>
-        {/* Resto del contenido de la barra de navegación */}
-      </Toolbar>
-    </AppBar>
+    <Box
+      sx={{
+        position: 'fixed',
+        borderRadius: '10px',
+        width: '40%',
+        height: '5%',
+        left: '50%',
+        bottom:'2%',
+        transform: 'translate(-50%, -50%)',
+        zIndex: 1,
+        display: isVisible ? 'block' : 'none',
+        backgroundColor: '#00130a6f',
+        backdropFilter: 'blur(5px)',
+        boxShadow: '2px 1px 10px rgba(0, 0, 0, 0.8)',
+        padding: '16px',
+      }}
+    >
+      <Link to='landing'>
+        <HomeIcon />
+      </Link>
+      <Link to='about'> 
+        <PersonIcon /> 
+      </Link>
+      <Link to='desing'>
+        <DesignServicesIcon />
+      </Link>
+      <Link to='project'>
+        <WorkIcon />
+      </Link>
+    </Box>
   );
 };
 
-export default FloatingNavBar;
+export default NavFloating;

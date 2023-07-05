@@ -16,7 +16,7 @@ function About() {
 
   return (
     <>
-      <Box>
+      <Box id ='about'>
         <Container sx={{ color: '#000000', padding: '20px' }}>
           <Typography variant='h4' align='left'>
             About Me
