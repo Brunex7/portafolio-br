@@ -1,21 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Container, Typography } from '@mui/material';
 import { Link } from 'react-scroll';
+import { Transition } from 'react-transition-group';
 
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import Presentacion from './Presentacion';
 import fondo from '../assets/fondo.svg';
 
+const duration = 1000;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 0 },
+  entered: { opacity: 1 },
+};
+
 const Landing = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setImageLoaded(true);
+    setIsVisible(true);
   }, []);
 
   return (
     <>
-      <Box 
+      <Box
         id='landing'
         sx={{
           position: 'relative',
@@ -50,20 +63,24 @@ const Landing = () => {
             height: '100vh',
             position: 'relative',
             zIndex: 1,
-            opacity: imageLoaded ? 1 : 0,
-            transition: 'opacity 3.0s',
           }}
         >
-          <Typography
-            variant="h1"
-            align="center"
-            color="white"
-            sx={{
-              fontSize: '70px',
-            }}
-          >
-            WELCOME
-          </Typography>
+          <Transition in={isVisible} timeout={duration}>
+            {(state) => (
+              <Typography
+                variant="h1"
+                align="center"
+                color="white"
+                sx={{
+                  fontSize: '70px',
+                  ...defaultStyle,
+                  ...transitionStyles[state],
+                }}
+              >
+                WELCOME
+              </Typography>
+            )}
+          </Transition>
         </Container>
         <Container
           sx={{
@@ -73,22 +90,26 @@ const Landing = () => {
             mt: -16,
             position: 'relative',
             zIndex: 1,
-            opacity: imageLoaded ? 1 : 0,
-            transition: 'opacity 5.0s',
           }}
         >
-          <Button
-            sx={{
+          <Transition in={isVisible} timeout={duration}>
+            {(state) => (
+              <Button
+              sx={{
               backgroundColor: 'none',
               color: 'white',
               height: '60px',
+              ...defaultStyle,
+              ...transitionStyles[state],
             }}
-          >
+            >
             <Link to="presentacion" className="link" smooth>
               <Typography variant="body2">to my portfolio</Typography>
               <ExpandMoreIcon style={{ fontSize: 'xx-large' }} />
             </Link>
           </Button>
+            )}
+          </Transition>
         </Container>
       </Box>
       <Presentacion />

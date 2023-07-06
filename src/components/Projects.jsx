@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
-import { Link as ScrollLink } from 'react-scroll';
 
 import Footer from './Footer';
 import projects from '../media/project';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const Projects = () => {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    setImageLoaded(true);
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,24 +17,12 @@ const Projects = () => {
     borderRadius: '18px',
   };
 
-  const cardAnimation = `
-    @keyframes fade-in {
-      0% {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  `;
-
   const containerStyle = {
     marginTop: '50px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
+    padding:'30px'
   };
 
   const gridContainerStyle = {
@@ -53,20 +34,10 @@ const Projects = () => {
     padding: '50px',
   };
 
-  const buttonStyle = {
-    borderRadius: '40px',
-    backgroundColor: 'none',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#750404',
-    },
-  };
-
   return (
     <>
-      <style>{cardAnimation}</style>
       <Box id ='project'>
-        <Container sx={{ color: '#000000', padding: '20px' }}>
+        <Container sx={{ padding: '30px' }}>
           <Typography variant='h4' align='left'>
             Projects
           </Typography>
@@ -76,7 +47,7 @@ const Projects = () => {
         <Container sx={gridContainerStyle}>
           <Grid container spacing={2}>
             {projects.map((project, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4} style={{ animationDelay: `${index * 0.1}s`, opacity: imageLoaded ? 1 : 0 }}>
+              <Grid item key={index} xs={12} sm={6} md={4}>
                 <Card style={cardStyle}>
                   <CardMedia
                     style={{ height: '200px' }}
@@ -100,6 +71,7 @@ const Projects = () => {
                       sx={{
                         backgroundColor: 'none',
                         color: '#ffffff',
+                        borderRadius:'10px',
                         '&:hover': {
                           backgroundColor: '#002b17',
                           color: '#ffffff',
@@ -115,6 +87,7 @@ const Projects = () => {
                       sx={{
                         backgroundColor: '#none',
                         color: '#ffffff',
+                        borderRadius:'10px',
                         '&:hover': {
                           backgroundColor: '#002b17',
                           color: '#ffffff',
@@ -128,13 +101,6 @@ const Projects = () => {
               </Grid>
             ))}
           </Grid>
-        </Container>
-        <Container sx={{ textAlign: 'center', marginTop: '50px' }}>
-          <ScrollLink to='footer' className='link' smooth>
-            <Button sx={buttonStyle}>
-              <ExpandMoreIcon />
-            </Button>
-          </ScrollLink>
         </Container>
       </Container>
       <Footer />

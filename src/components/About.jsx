@@ -4,11 +4,6 @@ import fotoP from '../assets/fotoPerfil.png';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 function About() {
-  const [imageLoaded, setImageLoaded] = useState(false);
-
-  useEffect(() => {
-    setImageLoaded(true);
-  }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -32,13 +27,13 @@ function About() {
       >
         <Box sx={{ flex: '0 0 auto' }}>
           <img
-            style={{ borderRadius: '18px', width: '100%', maxWidth: '350px', opacity: imageLoaded ? 1 : 0, transition: 'opacity 3.0s' }}
+            style={{ borderRadius: '25px', border:'6px solid #b8acac', width: '100%', maxWidth: '350px'}}
             onLoad={() => setImageLoaded(true)}
             src={fotoP}
             alt='foto perfil'
           />
         </Box>
-        <Box sx={{ ml:{md:'30px', xs:'0px'}, mt: { xs: '5%', md: '0' }, opacity: imageLoaded ? 1 : 0, transition: 'opacity 4.0s' }}>
+        <Box sx={{ ml:{md:'30px', xs:'0px'}, mt: { xs: '5%', md: '0' } }}>
           <Typography variant='h1' align='left' color= '#000000'>
             Bruno Romero
           </Typography>
@@ -53,7 +48,9 @@ function About() {
             sx={{
               backgroundColor: '#002b17',
               color: 'white',
+              padding:'15px',
               marginLeft:'-20px',
+              borderRadius:'14px',
               '&:hover': {
                 backgroundColor: 'white',
                 color:'#002b17'
@@ -68,7 +65,9 @@ function About() {
             sx={{
               backgroundColor: '#002b17',
               color: 'white',
+              padding:'15px',
               marginLeft:'20px',
+              borderRadius:'14px',
               '&:hover': {
                 backgroundColor: 'white',
                 color:'#002b17'
@@ -79,7 +78,7 @@ function About() {
         </Container>
         </Box>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', mt:'30px',  opacity: imageLoaded ? 1 : 0, transition: 'opacity 3.0s'}}>
+      <Box sx={{ display: 'flex', flexDirection: 'column', mt:'30px'}}>
           <Typography variant='h6' align='left' color='#3E3E3E'>
           Hi, my name is Bruno Romero. I completed my studies at the Bootcamp SoyHenry in March 2023. Currently, I continue my learning in a self-taught manner, exploring new technologies and undertaking new projects.
           </Typography>

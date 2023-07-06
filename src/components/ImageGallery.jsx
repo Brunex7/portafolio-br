@@ -1,12 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import imagesGroup from '../media/Images';
 import { Grid } from '@mui/material';
+import { Transition } from 'react-transition-group';
+
+import imagesGroup from '../media/Images';
+
+const duration = 1000;
+
+const defaultStyle = {
+  transition: `opacity ${duration}ms ease-in-out`,
+  opacity: 0,
+};
+
+const transitionStyles = {
+  entering: { opacity: 0 },
+  entered: { opacity: 1 },
+};
 
 function ImageGallery() {
 
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
-    <Grid
-      container
+    <Transition in={isVisible} timeout={duration}>
+      {(state) => (
+        <Grid
+        container
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
@@ -16,6 +38,8 @@ function ImageGallery() {
         marginRight: 'auto',
         paddingLeft: '30px',
         paddingRight: '30px',
+        ...defaultStyle,
+        ...transitionStyles[state],
       }}
     >
       {imagesGroup.map((subGroup, subGroupIndex) => (
@@ -44,6 +68,8 @@ function ImageGallery() {
         </Grid>
       ))}
     </Grid>
+    )}
+    </Transition>
   );
 }
 

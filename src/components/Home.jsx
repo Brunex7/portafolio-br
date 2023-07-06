@@ -9,8 +9,15 @@ function Home() {
   }, []);
 
   return (
-    <Box id='desing'>
-      <Container sx={{ color: '#000000', padding: '20px' }}>
+    <Box id='desing' 
+    sx={{
+      backgroundColor: '#002b17',
+      width: '100%',
+      height: 'auto',
+      marginTop: '40px',
+      padding: '5px 0 50px 0',
+    }}>
+      <Container sx={{ color: '#F2F0E9', padding: '20px' }}>
         <Typography variant='h4' align='left'>
           Portfolio Highlights
         </Typography>
@@ -27,7 +34,7 @@ function Home() {
       >
         <Typography
           variant='h3'
-          color={'#000000'}
+          color={'#F2F0E9'}
           sx={{
             textAlign: 'center',
             margin: '20px',
@@ -35,19 +42,7 @@ function Home() {
         >
           Here you can see some of my best designs as a graphic designer.
         </Typography>
-        
-        <Container
-          sx={{
-            backgroundColor: '#002b17',
-            borderRadius: '55px',
-            width: '100%',
-            height: 'auto',
-            marginTop: '40px',
-            padding: '5px 0 50px 0',
-          }}
-        >
           <ImageGallery />
-        </Container>
       </div>
     </Box>
   );

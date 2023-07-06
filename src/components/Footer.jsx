@@ -5,14 +5,15 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import EmailIcon from '@mui/icons-material/Email';
 
 const footerStyles = {
-  backgroundColor: '#f5f5f5',
+  backgroundColor: '#000000',
   padding: '30px',
-  marginTop: 'auto',
+  marginTop: '10%',
+  height:'150px'
 };
 
 const socialIconStyles = {
   margin: '8px',
-  color: '#750404',
+  color: '#F2F0E9',
   width:'30px',
   height:'30px'
 };
@@ -22,7 +23,7 @@ const Footer = () => {
     <footer style={footerStyles} id='footer'>
       <Container maxWidth="md">
         <Grid container spacing={3}>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={6} color={'#F2F0E9'}>
             <p>&copy; {new Date().getFullYear()} My Portfolio</p>
           </Grid>
           <Grid item xs={12} sm={6} style={{ display: 'flex', justifyContent: 'center' }}>
