@@ -1,6 +1,6 @@
 import { Box, Button, Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import fotoP from '../assets/fotoPerfil.png';
+import fotoP from '../assets/fotoPerfil.jpg';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 
 function About() {
@@ -27,7 +27,7 @@ function About() {
       >
         <Box sx={{ flex: '0 0 auto' }}>
           <img
-            style={{ borderRadius: '25px', border:'6px solid #b8acac', width: '100%', maxWidth: '350px'}}
+            style={{ borderRadius: '25px', border:'6px solid #b8acac', width: '90%',height:'90%', maxWidth: '350px', objectFit:'cover'}}
             onLoad={() => setImageLoaded(true)}
             src={fotoP}
             alt='foto perfil'
