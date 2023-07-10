@@ -34,6 +34,16 @@ const Projects = () => {
     padding: '50px',
   };
 
+  const buttonStyle = {
+    backgroundColor: 'none',
+    color: '#ffffff',
+    borderRadius:'10px',
+    '&:hover': {
+      backgroundColor: '#002b17',
+      color: '#ffffff',
+    },
+  };
+
   return (
     <>
       <Box id ='project'>
@@ -43,6 +53,7 @@ const Projects = () => {
           </Typography>
         </Container>
       </Box>
+
       <Container sx={containerStyle}>
         <Container sx={gridContainerStyle}>
           <Grid container spacing={2}>
@@ -68,15 +79,7 @@ const Projects = () => {
                       href={project.deployLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{
-                        backgroundColor: 'none',
-                        color: '#ffffff',
-                        borderRadius:'10px',
-                        '&:hover': {
-                          backgroundColor: '#002b17',
-                          color: '#ffffff',
-                        },
-                      }}
+                      sx={ buttonStyle }
                     >
                       Deploy
                     </Button>
@@ -84,15 +87,7 @@ const Projects = () => {
                       href={project.codeLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      sx={{
-                        backgroundColor: '#none',
-                        color: '#ffffff',
-                        borderRadius:'10px',
-                        '&:hover': {
-                          backgroundColor: '#002b17',
-                          color: '#ffffff',
-                        },
-                      }}
+                      sx={ buttonStyle }
                     >
                       Code
                     </Button>
@@ -103,7 +98,9 @@ const Projects = () => {
           </Grid>
         </Container>
       </Container>
+
       <Footer />
+      
     </>
   );
 };

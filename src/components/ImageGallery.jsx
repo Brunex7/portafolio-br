@@ -17,6 +17,7 @@ const transitionStyles = {
 };
 
 function ImageGallery() {
+  
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
