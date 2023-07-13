@@ -4,6 +4,7 @@ import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import NavFloating from "./components/NavFloating";
+import Tags from "./components/Tags";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <div>
         <Landing />
         <About />
+        <Tags />
         <Home />
         <Projects />
       </div>

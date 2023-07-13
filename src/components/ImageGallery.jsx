@@ -4,7 +4,7 @@ import { Transition } from 'react-transition-group';
 
 import imagesGroup from '../media/Images';
 
-const duration = 500;
+const duration = 400;
 
 const defaultStyle = {
   transition: `opacity ${duration}ms ease-in-out`,

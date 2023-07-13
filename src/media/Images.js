@@ -1,11 +1,6 @@
-import make from '../assets/Sticker MAKE.jpeg';
-import basc from '../assets/Sticker ROOTBasc.jpeg';
-import min from '../assets/Sticker ROOTMin.jpeg';
 import mont from '../assets/Sticker ROOTMONT.jpeg';
 import primate from '../assets/Logo primate.jpeg';
-import postres from '../assets/postres mym.jpeg';
 import sand from '../assets/sandwich mym.jpeg';
-import folleto from '../assets/folleto MyM 2.jpeg';
 import phone from '../assets/PhoneCase.jpeg';
 import cade from '../assets/DF cadete.jpeg';
 import br from '../assets/logo BR.jpeg';
