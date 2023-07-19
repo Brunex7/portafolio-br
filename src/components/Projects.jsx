@@ -30,8 +30,8 @@ const Projects = () => {
     maxWidth: '1150px',
     height: 'auto',
     backgroundColor: '#101010',
-    borderRadius: '55px',
-    padding: '50px',
+    borderRadius: '18px',
+    padding: '20px',
   };
 
   const buttonStyle = {
