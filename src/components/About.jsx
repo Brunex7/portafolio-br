@@ -105,13 +105,15 @@ function About() {
 
       <Box sx={{ display: 'flex', flexDirection: 'column', mt:'30px', width:'auto'}}>
         <Typography variant='h6' align='left' color='#3E3E3E'>
-          Hi, my name is Bruno Romero. I completed my studies at the Bootcamp SoyHenry in March 2023. Currently, I continue my learning in a self-taught manner, exploring new technologies and undertaking new projects.
+        I'm Bruno Romero, a graduate of the SoyHenry Bootcamp in March 2023. I have experience in UX/UI Design and Graphic Design, and I'm currently continuing to learn and undertake projects on a self-taught basis.
         </Typography>
         <Typography variant='h6' align='left' mt='20px' color='#3E3E3E'>
-          I have knowledge in UX/UI Design and experience in Graphic Design, which I have studied independently. This combination has allowed me to effectively manage my time and improve my soft skills, as I have had to seek and work with my own clients. While I specialize in Front-end, I also have knowledge in Back-end. My skills include mastery of agile methodologies, the use of GIT, data structures, algorithms, CSS frameworks, and design tools such as Illustrator and Photoshop. I have experience in both Front-end and Back-end development, as well as data architecture, using technologies such as JavaScript, React, Redux, Node, Express, SQL, HTML, CSS, and Git. I am skilled at problem-solving, adapt quickly to new challenges, and enjoy working in a team. Additionally, I have an A2 level of English proficiency.
+        My skillset includes proficiency in Agile methodologies, GIT, data structures, algorithms, and CSS frameworks. Additionally, I have hands-on experience with JavaScript, React, Redux, Node, Express, SQL, HTML, CSS, and Git. I excel in problem-solving and thoroughly enjoy working in a team environment.
         </Typography>
         <Typography variant='h6' align='left' mt='20px' color='#3E3E3E'>
-          I am excited to take on new challenges and gain more experience to continue growing as a professional in the amazing world of programming. For a year, I dedicated myself to freelance design, collaborating with both my own clients and a Community Manager. I hope to contribute my skills and knowledge to future projects and continue progressing in this fascinating field.
+        For one year, I focused on freelance design, collaborating with clients and a Community Manager. Now, I'm excited to take on new challenges and further my professional growth in the fascinating world of programming.
+        I look forward to contributing my skills and knowledge to future projects and continuing to progress in my career!
+        English proficiency level: A2.
         </Typography>
       </Box>
       </Container>
