@@ -11,28 +11,28 @@ function About() {
   const [showFullText, setShowFullText] = useState(false);
 
   const containerStyle = {
-    marginTop: '50px',
+    marginTop: '350px',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     padding: '30px',
   };
 
-  const imageStyle = {
-    borderRadius: '25px',
-    border: '6px solid #b8acac',
-    width: '90%',
-    height: '90%',
-    maxWidth: '400px',
-    objectFit: 'cover',
+  const divStyle = {
+    position: 'absolute',
+    width: '100%',
+    height: '100%',
+    zIndex: -1,
+    background: `linear-gradient(to top, rgba(0, 0, 0, 20), rgba(0, 0, 0, 0)) 0 0/100% 100%, url(${fotoP}) center center/cover`,
   };
+
 
   const buttonStyle1 = {
     backgroundColor: '#002b17',
     color: 'white',
     padding: '15px',
     marginLeft: '-20px',
-    borderRadius: '14px',
+    borderRadius: '10px',
     '&:hover': {
       backgroundColor: 'white',
       color: '#002b17',
@@ -44,7 +44,7 @@ function About() {
     color: 'white',
     padding: '15px',
     marginLeft: '40px',
-    borderRadius: '14px',
+    borderRadius: '10px',
     '&:hover': {
       backgroundColor: 'white',
       color: '#002b17',
@@ -58,13 +58,8 @@ function About() {
 
   return (
     <>
-      <Box id="about">
-        <Container sx={{ color: '#000000', padding: '20px' }}>
-          <Typography variant="h4" align="left">
-            About Me
-          </Typography>
-        </Container>
-      </Box>
+      <Box id="about"/>
+      <div style={ divStyle } />
 
       <Container style={containerStyle}>
         <Box
@@ -75,15 +70,7 @@ function About() {
             flexDirection: { xs: 'column', md: 'row' },
           }}
         >
-          <img style={imageStyle} src={fotoP} alt="foto perfil" />
           <Box sx={{ ml: { md: '30px', xs: '0px' }, mt: { xs: '5%', md: '0' } }}>
-            <Typography variant="h1" align="left" color="#000000">
-              Bruno Romero
-            </Typography>
-            <Typography variant="h5" align="left" color="#3E3E3E">
-              Full Stack Developer & Ux/Ui Designer
-            </Typography>
-
             <Container sx={{ display: 'flex', mt: '10px' }}>
               <Button href="../RomeroBrunoCv.pdf" download startIcon={<CloudDownloadIcon />} sx={buttonStyle1}>
                 Download CV
@@ -100,16 +87,16 @@ function About() {
 
           {showFullText ? (
             <>
-              <Typography variant="h6" align="left" color="#3E3E3E">
+              <Typography variant="h6" align="left" color="#D9D9D9">
                 I'm Bruno Romero, a graduate of the SoyHenry Bootcamp in March 2023. I have experience in UX/UI Design
                 and Graphic Design, and I'm currently continuing to learn and undertake projects on a self-taught basis.
               </Typography>
-              <Typography variant="h6" align="left" mt="20px" color="#3E3E3E">
+              <Typography variant="h6" align="left" mt="20px" color="#D9D9D9">
                 My skillset includes proficiency in Agile methodologies, GIT, data structures, algorithms, and CSS
                 frameworks. Additionally, I have hands-on experience with JavaScript, React, Redux, Node, Express, SQL,
                 HTML, CSS, and Git. I excel in problem-solving and thoroughly enjoy working in a team environment.
               </Typography>
-              <Typography variant="h6" align="left" mt="20px" color="#3E3E3E">
+              <Typography variant="h6" align="left" mt="20px" color="#D9D9D9">
                 For one year, I focused on freelance design, collaborating with clients and a Community Manager. Now, I'm
                 excited to take on new challenges and further my professional growth in the fascinating world of
                 programming. I look forward to contributing my skills and knowledge to future projects and continuing to
@@ -117,9 +104,9 @@ function About() {
               </Typography>
             </>
           ) : (
-    
+            
             <>
-              <Typography variant="h6" align="left" color="#3E3E3E">
+              <Typography variant="h6" align="left" color="#D9D9D9">
                 I'm Bruno Romero, a graduate of the SoyHenry Bootcamp in March 2023. I have experience in UX/UI Design
                 and Graphic Design, and I'm currently continuing to learn and undertake projects on a self-taught basis.
                 My skillset includes proficiency in Agile methodologies, GIT, data structures, algorithms, and CSS

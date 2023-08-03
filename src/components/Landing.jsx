@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Container, Typography } from '@mui/material';
-import { Link } from 'react-scroll';
+import { Box,Container, Typography } from '@mui/material';
 import { Transition } from 'react-transition-group';
-
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Presentacion from './Presentacion';
 import fondo from '../assets/fondo.svg';
 
 const duration = 1000;
@@ -47,7 +43,8 @@ const Landing = () => {
     width: '100%',
     height: '100%',
     zIndex: -1,
-    background: `linear-gradient(to top, rgba(0, 0, 0, 20), rgba(0, 0, 0, 0)) 0 0/100% 100%, url(${fondo}) center center/cover`,
+    filter:'blur(20px)',
+    background: `linear-gradient(to top, rgba(0, 0, 0, 60), rgba(0, 0, 0, 0)) 0 0/100% 100%, url(${fondo}) center center/cover`,
   };
 
   const containerStyle1 = {
@@ -63,7 +60,7 @@ const Landing = () => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    mt: -16,
+    mt: -37,
     position: 'relative',
     zIndex: 1,
   };
@@ -73,7 +70,7 @@ const Landing = () => {
       <Box id='landing' sx={ boxStyle }>
         <div style={ divStyle } />
         
-        <Container maxWidth="xs" sx={ containerStyle1 }>
+        <Container sx={ containerStyle1 }>
           <Transition in={isVisible} timeout={duration}>
             {(state) => (
               <Typography
@@ -86,7 +83,7 @@ const Landing = () => {
                   ...transitionStyles[state],
                 }}
               >
-                WELCOME
+                Bruno Romero
               </Typography>
             )}
           </Transition>
@@ -95,26 +92,23 @@ const Landing = () => {
         <Container sx={ containerStyle2 }>
           <Transition in={isVisible} timeout={duration}>
             {(state) => (
-              <Button
-                sx={{
-                  backgroundColor: 'none',
-                  color: '#ffffff',
-                  height: '60px',
-                  ...defaultStyle,
-                  ...transitionStyles[state],
-                }}
-              >
-                <Link to="presentacion" className="link" smooth>
-                  <Typography variant="body2">to my portfolio</Typography>
-                  <ExpandMoreIcon style={{ fontSize: 'xx-large' }} />
-                </Link>
-              </Button>
+              <Typography
+              variant="h7"
+              align="center"
+              sx={{
+                color:"#ffffff",
+                fontSize: '25px',
+                ...defaultStyle,
+                ...transitionStyles[state],
+              }}
+            >
+              I'm a Full Stack Developer & UX/UI Designer.
+            </Typography>
+              
             )}
           </Transition>
         </Container>
-
       </Box>
-      <Presentacion />
     </>
   );
 };

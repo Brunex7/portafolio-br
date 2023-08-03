@@ -1,5 +1,4 @@
 import react from '../assets/icons/react-svgrepo-com.svg'
-import redux from '../assets/icons/redux-fill-svgrepo-com.svg'
 import js from '../assets/icons/javascript-svgrepo-com.svg'
 import node from '../assets/icons/node-js-svgrepo-com.svg'
 import ps from '../assets/icons/photoshop-svgrepo-com.svg'
@@ -14,7 +13,6 @@ import sql from '../assets/icons/sql-file-format-svgrepo-com.svg'
 
 const Items = [
     react,
-    redux,
     js,
     node,
     sql,

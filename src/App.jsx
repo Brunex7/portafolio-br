@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import Home from "./components/Home";
 import Landing from "./components/Landing";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import NavFloating from "./components/NavFloating";
 import Tags from "./components/Tags";
+import Root from "./components/Root";
 
 function App() {
 
@@ -19,10 +19,10 @@ function App() {
       <NavFloating />
       <div>
         <Landing />
+        <Projects />
         <About />
         <Tags />
-        <Home />
-        <Projects />
+        <Root />
       </div>
     </div>
   );

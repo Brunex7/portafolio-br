@@ -1,52 +1,36 @@
-import mont from '../assets/Sticker ROOTMONT.jpeg';
-import primate from '../assets/Logo primate.jpeg';
-import sand from '../assets/sandwich mym.jpeg';
-import phone from '../assets/PhoneCase.jpeg';
-import cade from '../assets/DF cadete.jpeg';
-import br from '../assets/logo BR.jpeg';
-import bl from '../assets/logo BL.jpeg';
-import root from '../assets/logo root.jpeg';
+import flor from '../assets/florRoot.jpeg';
+import buzo from '../assets/buzoRoot.jpeg';
+import toro from '../assets/toroRoot.jpeg';
+import fyl from '../assets/floylauRoot.jpeg';
+import fly from '../assets/flyRoot.jpeg';
+import kiko from '../assets/kikoRoot.jpeg';
 
 const imagesGroup = [
-  [
-    {
-      url: mont,
-      title: 'STICKER BY ROOT',
-      description:'Sticker desingned for Root.bl (clothing brand) capturing its essence.'
-    },
-    {
-      url: cade,
-      title: 'TECHNOLOGY FLYER',
-    },
-],
-[
   {
-    url: root,
-    title: 'LOGOS',
+    image: buzo,
+    description: 'Hoodies Hills',
   },
   {
-    url: bl,
-    title: 'LOGOS',
-  },
-],[
-  {
-    url: primate,
-    title: 'LOGOS',
+    image: toro,
+    description: 'Cozzy Hoodies',
   },
   {
-    url: sand,
-    title: 'FOOD FLYER',
-  },
-],[
-  {
-    url: phone,
-    title: 'TECHNOLOGY FLYER',
+    image: fly,
+    description: 'Hoodies Fly.',
   },
   {
-    url: br,
-    title: 'LOGOS',
+    image: fyl,
+    description: 'Hoodies Hills',
   },
-  ]
+  {
+    image: kiko,
+    description: 'T-Shirt World',
+  },
+  {
+    image: flor,
+      description: 'Cozzy Hoodies',
+      // deployLink: 'https://rick-and-morty-app-sooty.vercel.app/',
+  },
 ];
 
 export default imagesGroup
