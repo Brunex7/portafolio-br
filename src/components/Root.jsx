@@ -11,7 +11,7 @@ const Root = () => {
 
   const [ref, inView] = useInView({
     triggerOnce: false,
-    rootMargin: '70px 0px', 
+    rootMargin: '-100px 0px', 
   });
 
   const cardStyle = {
@@ -89,10 +89,10 @@ const Root = () => {
         <Typography variant='h4' color='white'>
         Root.BL
         </Typography>
+            <div ref={ref}>
           <Grid container spacing={2}>
             {imagesGroup.map((project, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
-                <div ref={ref}>
                 <Card style={cardStyle}>
                  <div style={imageContainerStyle}>
                     <CardMedia
@@ -121,10 +121,10 @@ const Root = () => {
                   )}
                   </CardActions>
                 </Card>
-              </div>
               </Grid>
             ))}
           </Grid>
+            </div>
     </Box>
     </>
   );

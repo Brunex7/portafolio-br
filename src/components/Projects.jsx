@@ -10,8 +10,8 @@ const Projects = () => {
   }, []);
 
   const [ref, inView] = useInView({
-    triggerOnce: true,
-    rootMargin: '-100px 0px', 
+    triggerOnce: false,
+    rootMargin: '-200px 0px', 
   });
 
   const cardStyle = {
@@ -88,10 +88,10 @@ const Projects = () => {
   return (
     <>
       <Box id ='project' sx={containerStyle}>
+        <div ref={ref} >
           <Grid container spacing={2}>
             {projects.map((project, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
-               <div ref={ref} >
                 <Card style={cardStyle}>
                 <div style={imageContainerStyle}>
                   <CardMedia
@@ -130,10 +130,10 @@ const Projects = () => {
                   )}
                   </CardActions>
                 </Card>
-            </div>
               </Grid>
             ))}
           </Grid>
+        </div>
     </Box>
     </>
   );
