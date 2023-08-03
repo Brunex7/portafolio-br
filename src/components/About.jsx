@@ -114,7 +114,7 @@ function About() {
                 HTML, CSS, and Git. I excel in problem-solving and thoroughly enjoy working in a team environment.
               </Typography>
 
-              <Button onClick={toggleTextVisibility} sx={{color:'#002b17'}}>
+              <Button onClick={toggleTextVisibility} sx={{color:'#047942'}}>
                 See More
               </Button>
             </>
