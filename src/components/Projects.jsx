@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import projects from '../media/project';
+import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    rootMargin: '-100px 0px', 
+  });
 
   const cardStyle = {
     backgroundColor: '#000000',
@@ -15,6 +21,9 @@ const Projects = () => {
     animation: 'fade-in 3.0s ease-in-out',
     borderRadius: '10px',
     position: 'relative',
+    transform: inView ? 'translateY(0)' : 'translateY(100px)', 
+    opacity: inView ? 1 : 0,
+    transition: 'transform 1s, opacity 1s',
   };
 
   const containerStyle = {
@@ -82,6 +91,7 @@ const Projects = () => {
           <Grid container spacing={2}>
             {projects.map((project, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
+               <div ref={ref} >
                 <Card style={cardStyle}>
                 <div style={imageContainerStyle}>
                   <CardMedia
@@ -120,6 +130,7 @@ const Projects = () => {
                   )}
                   </CardActions>
                 </Card>
+            </div>
               </Grid>
             ))}
           </Grid>

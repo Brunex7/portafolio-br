@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import imagesGroup from '../media/Images';
+import { useInView } from 'react-intersection-observer';
 
 const Root = () => {
 
@@ -8,13 +9,20 @@ const Root = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const [ref, inView] = useInView({
+    triggerOnce: false,
+    rootMargin: '70px 0px', 
+  });
+
   const cardStyle = {
     backgroundColor: '#000000',
     border: '1px solid #636363',
     padding:'5px',
-    animation: 'fade-in 3.0s ease-in-out',
     borderRadius: '10px',
     position: 'relative',
+    transform: inView ? 'translateY(0)' : 'translateY(100px)', 
+    opacity: inView ? 1 : 0,
+    transition: 'transform 1s, opacity 1s',
   };
 
   const containerStyle = {
@@ -84,6 +92,7 @@ const Root = () => {
           <Grid container spacing={2}>
             {imagesGroup.map((project, index) => (
               <Grid item key={index} xs={12} sm={6} md={4}>
+                <div ref={ref}>
                 <Card style={cardStyle}>
                  <div style={imageContainerStyle}>
                     <CardMedia
@@ -112,6 +121,7 @@ const Root = () => {
                   )}
                   </CardActions>
                 </Card>
+              </div>
               </Grid>
             ))}
           </Grid>
