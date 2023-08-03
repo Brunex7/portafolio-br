@@ -6,4 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000000;
+  
+}
+
+@font-face {
+  font-family: 'rammet';
+  src: url('./assets/fuente/RammettoOne-Regular.ttf') format('truetype');
 }

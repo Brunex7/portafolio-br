@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Box,Container, Typography } from '@mui/material';
+import { Box,Button,Container, Typography } from '@mui/material';
 import { Transition } from 'react-transition-group';
 import fondo from '../assets/fondo.svg';
+import { Link } from 'react-scroll';
 
 const duration = 1000;
 
@@ -31,7 +32,7 @@ const Landing = () => {
       sm: 5,
       md: 2,
     },
-    minHeight: '800px',
+    minHeight: '700px',
     display: 'flex',
     flexDirection: 'column',
   };
@@ -69,7 +70,7 @@ const Landing = () => {
     <>
       <Box id='landing' sx={ boxStyle }>
         <div style={ divStyle } />
-        
+
         <Container sx={ containerStyle1 }>
           <Transition in={isVisible} timeout={duration}>
             {(state) => (
@@ -77,6 +78,7 @@ const Landing = () => {
                 variant="h1"
                 align="center"
                 sx={{
+                  fontFamily:'rammet',
                   color:"#ffffff",
                   fontSize: '70px',
                   ...defaultStyle,
@@ -97,14 +99,34 @@ const Landing = () => {
               align="center"
               sx={{
                 color:"#ffffff",
-                fontSize: '25px',
+                fontSize: '35px',
                 ...defaultStyle,
                 ...transitionStyles[state],
               }}
             >
               I'm a Full Stack Developer & UX/UI Designer.
             </Typography>
-              
+
+            )}
+          </Transition>
+        </Container>
+        <Container sx={ containerStyle2 }>
+        <Transition in={isVisible} timeout={duration}>
+            {(state) => (
+              <Link Link to="project" className="link" smooth>
+              <Button
+              sx={{
+                color:"#ffffff",
+                fontSize: '10px',
+                ...defaultStyle,
+                ...transitionStyles[state],
+                marginTop:'320px'
+              }}
+            >
+              swipe
+            </Button>
+            </Link>
+
             )}
           </Transition>
         </Container>
