@@ -80,7 +80,7 @@ const Landing = () => {
                 sx={{
                   fontFamily:'rammet',
                   color:"#ffffff",
-                  fontSize: '70px',
+                  fontSize: '60px',
                   ...defaultStyle,
                   ...transitionStyles[state],
                 }}
@@ -99,7 +99,7 @@ const Landing = () => {
               align="center"
               sx={{
                 color:"#ffffff",
-                fontSize: '35px',
+                fontSize: '150%',
                 ...defaultStyle,
                 ...transitionStyles[state],
               }}
