@@ -35,7 +35,7 @@ const projects = [
     {
       image: BR,
       description: 'You are browsing through it, although I leave here below the display of my previous portfolio, you can see it and compare one project with another.',
-      deployLink: 'https://portafolio-br.vercel.app/',
+      deployLink: 'https://portafolio-nine-henna.vercel.app/',
       codeLink: 'https://github.com/Brunex7/portafolio-br.git'
     },
 ];

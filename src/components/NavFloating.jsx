@@ -1,7 +1,8 @@
 import { Transition } from 'react-transition-group';
 import React, { useEffect, useState } from 'react';
 import { Box, Stack } from '@mui/material';
-import { Link } from 'react-scroll';
+import { Link as MuiLink } from '@mui/material';
+import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 
 // import { Root } from '../assets/icons/logoRoot.svg';
@@ -73,41 +74,41 @@ const NavFloating = () => {
       {state => (
         <NavBox state={state} animationDuration={animationDuration}>
           <Stack direction="row" spacing={2} justifyContent="space-around" alignItems="center" color={'#000000'}>
-            <Link to="landing" className="link" smooth>
+            <ScrollLink to="landing" className="link" smooth>
               <NavIcon animationDuration={animationDuration}>
                 <HomeIcon style={icons} />
               </NavIcon>
-            </Link>
-            <Link to="project" className="link" smooth>
+            </ScrollLink>
+            <ScrollLink to="project" className="link" smooth>
               <NavIcon animationDuration={animationDuration}>
                 <DesignServicesIcon style={icons} />
               </NavIcon>
-            </Link>
-            <Link to="about" className="link" smooth>
+            </ScrollLink>
+            <ScrollLink to="about" className="link" smooth>
               <NavIcon animationDuration={animationDuration}>
                 <PersonIcon style={icons} />
               </NavIcon>
-            </Link>
-            {/* <Link to="desing" className="link" smooth>
+            </ScrollLink>
+            {/* <ScrollLink to="desing" className="link" smooth>
               <NavIcon animationDuration={animationDuration}>
                 <Root  style={icons}/>
               </NavIcon>
-            </Link> */}
-            <Link href="https://www.linkedin.com/in/bruno-romero-685188255/" target="_blank" rel="noopener">
+            </ScrollLink> */}
+            <MuiLink href="https://www.linkedin.com/in/bruno-romero-685188255/" target="_blank" rel="noopener">
               <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
                 <LinkedInIcon  style={icons} />
               </NavIcon>
-            </Link>
-            <Link href="https://github.com/Brunex7" target="_blank" rel="noopener">
+            </MuiLink>
+            <MuiLink href="https://github.com/Brunex7" target="_blank" rel="noopener">
               <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
                 <GitHubIcon  style={icons} />
               </NavIcon>
-            </Link>
-            <Link href="mailto:brunoromero200@gmail.com" target="_blank" rel="noopener">
+            </MuiLink>
+            <MuiLink href="mailto:brunoromero200@gmail.com" target="_blank" rel="noopener">
               <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
                 <EmailIcon style={icons} />
               </NavIcon>
-            </Link>
+            </MuiLink>
           </Stack>
         </NavBox>
       )}

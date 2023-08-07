@@ -8,7 +8,7 @@ import kiko from '../assets/kikoRoot.jpeg';
 const imagesGroup = [
   {
     image: buzo,
-    description: 'Hoodies Hills',
+    description: 'Hills Hoodies',
   },
   {
     image: toro,
@@ -16,15 +16,15 @@ const imagesGroup = [
   },
   {
     image: fly,
-    description: 'Hoodies Fly.',
+    description: 'Fly Hoodies',
   },
   {
     image: fyl,
-    description: 'Hoodies Hills',
+    description: 'Hills Hoodies',
   },
   {
     image: kiko,
-    description: 'T-Shirt World',
+    description: 'World T-Shirt',
   },
   {
     image: flor,

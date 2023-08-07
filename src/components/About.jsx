@@ -30,9 +30,9 @@ function About() {
   const buttonStyle1 = {
     backgroundColor: '#002b17',
     color: 'white',
-    padding: '15px',
-    marginLeft: '-20px',
+    padding: '10px',
     borderRadius: '10px',
+    width:'70%',
     '&:hover': {
       backgroundColor: 'white',
       color: '#002b17',
@@ -42,9 +42,10 @@ function About() {
   const buttonStyle2 = {
     backgroundColor: '#002b17',
     color: 'white',
-    padding: '15px',
-    marginLeft: '40px',
+    padding: '10px',
+    marginLeft: '30px',
     borderRadius: '10px',
+    width:'100%',
     '&:hover': {
       backgroundColor: 'white',
       color: '#002b17',
