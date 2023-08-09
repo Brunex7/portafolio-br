@@ -17,7 +17,7 @@ const projects = [
   {
     image: Root,
     description: '(Logo Root) The design of the website is being finished at the moment it is not enabled.',
-    deployLink: '',
+    deployLink: 'https://root-website-ten.vercel.app/',
     codeLink: ''
   },
   {

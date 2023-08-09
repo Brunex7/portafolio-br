@@ -29,7 +29,7 @@ const imagesGroup = [
   {
     image: flor,
       description: 'Cozzy Hoodies',
-      // deployLink: 'https://rick-and-morty-app-sooty.vercel.app/',
+      deployLink: 'https://root-website-ten.vercel.app/',
   },
 ];
 
