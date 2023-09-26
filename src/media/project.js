@@ -2,7 +2,7 @@ import RyM from '../assets/portada RyM.jpg';
 import PI from '../assets/portada PI.jpg';
 import BR from '../assets/portada BR.jpg';
 import primate from '../assets/Logo primate.jpeg';
-import mont from '../assets/rootMont.jpeg';
+import creativity from '../assets/Creativity.png';
 import Root from '../assets/portada Root.jpg';
 
 const projects = [
@@ -11,14 +11,16 @@ const projects = [
     description: 'Logo Primate.',
   },
   {
-    image: mont,
+    image: creativity,
     description: 'Second Brand Logo (Root.bl)',
+    deployLink: 'https://creativity-six.vercel.app/',
+    codeLink: 'https://github.com/Brunex7/creativity'
   },
   {
     image: Root,
     description: '(Logo Root) The design of the website is being finished at the moment it is not enabled.',
     deployLink: 'https://root-website-ten.vercel.app/',
-    codeLink: ''
+    codeLink: 'https://github.com/Brunex7/root-website'
   },
   {
     image: RyM,
