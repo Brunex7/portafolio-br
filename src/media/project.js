@@ -12,7 +12,7 @@ const projects = [
   },
   {
     image: creativity,
-    description: 'Second Brand Logo (Root.bl)',
+    description: 'Page of creative tools for designers, programmers or content creators.',
     deployLink: 'https://creativity-six.vercel.app/',
     codeLink: 'https://github.com/Brunex7/creativity'
   },
