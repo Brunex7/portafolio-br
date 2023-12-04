@@ -1,22 +1,28 @@
-import { Box, Button, Container, Typography } from '@mui/material';
+import { Box, Button, Container, Stack, Typography, Link } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 import fotoP from '../assets/fotoPerfil.jpg';
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
+import Tags from './Tags';
 
 function About() {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const [showFullText, setShowFullText] = useState(false);
-
-  const containerStyle = {
-    marginTop: '350px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '30px',
+  
+  const toggleTextVisibility = () => {
+    setShowFullText((prev) => !prev);
   };
+  
+  const icons = {
+    fontSize:'40px',
+    verticalAlign: 'middle',
+  }
 
   const divStyle = {
     position: 'absolute',
@@ -26,67 +32,99 @@ function About() {
     background: `linear-gradient(to top, rgba(0, 0, 0, 20), rgba(0, 0, 0, 0)) 0 0/100% 100%, url(${fotoP}) center center/cover`,
   };
 
+  const div ={
+    display: 'flex',
+    width: '100%',
+    height: '1px',
+    background: '#D9D9D9',
+  }
 
-  const buttonStyle1 = {
-    backgroundColor: '#002b17',
-    color: 'white',
-    padding: '10px',
-    borderRadius: '10px',
-    width:'70%',
-    '&:hover': {
-      backgroundColor: 'white',
-      color: '#002b17',
-    },
-  };
+  const containerPrin ={
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+  }
 
-  const buttonStyle2 = {
-    backgroundColor: '#002b17',
-    color: 'white',
-    padding: '10px',
-    marginLeft: '30px',
-    borderRadius: '10px',
-    width:'100%',
-    '&:hover': {
-      backgroundColor: 'white',
-      color: '#002b17',
-    },
-  };
-
+  const boxone ={
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    width:'100%',  
+    alignItems:'center',
+    margin:'10px', 
+    marginTop:'400px'
+  }
  
-  const toggleTextVisibility = () => {
-    setShowFullText((prev) => !prev);
-  };
+  const conteBut ={
+    display: 'flex',
+    flexDirection: 'row', 
+    height: '35px',
+    width:'180px',
+    justifyContent:'space-between',
+    marginRight:'970px',
+    marginTop:'15px',
+    marginBottom:'5px'
+  }
 
+  const boxcont ={
+    display: 'flex',
+    flexDirection: 'column',
+  }
+
+  const mockup ={
+    width: '100%',
+    height: '100%',
+    backgroundColor:'#3d3d3d',
+    borderRadius:'20px',
+    marginTop:'20px',
+    padding: 5,
+  }
+
+  const buttonStyle ={
+    width: '80px',
+    height: '30px',
+    background: '#FFF',
+    color: '#002b17',
+    fontSize:'12px',
+    borderRadius:'5px',
+    '&:hover': {
+      backgroundColor: '#002b17',
+      color: '#ffffff',
+    },
+  }
+  
   return (
-    <>
-      <Box id="about"/>
-      <div style={ divStyle } />
-
-      <Container style={containerStyle}>
-        <Box
-          sx={{
-            display: 'flex',
-            width: '100%',
-            justifyContent: 'space-between',
-            flexDirection: { xs: 'column', md: 'row' },
-          }}
-        >
-          <Box sx={{ ml: { md: '30px', xs: '0px' }, mt: { xs: '5%', md: '0' } }}>
-            <Container sx={{ display: 'flex', mt: '10px' }}>
-              <Button href="../RomeroBrunoCv.pdf" download startIcon={<CloudDownloadIcon />} sx={buttonStyle1}>
-                Download CV
-              </Button>
-
-              <Button href="../Portafolio.pdf" download startIcon={<CloudDownloadIcon />} sx={buttonStyle2}>
-                Download Porfolio
-              </Button>
-            </Container>
-          </Box>
+  <>
+    <div style={ divStyle } /> 
+    <Box id="about" sx={boxcont}>
+      <Container sx={containerPrin} >
+        <Box sx={boxone}>
+          <Typography variant='h4' color={'#fff'} width={'600px'} >About Me</Typography>
         </Box>
-
-        <Box sx={{ display: 'flex', flexDirection: 'column', mt: '30px', width: 'auto' }}>
-
-          {showFullText ? (
+      <div style={div} />
+          <Box sx={conteBut}>
+          <Button
+            href="../RomeroBrunoCv.pdf" 
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={ buttonStyle }
+          >
+            CV
+          </Button>
+          <Button
+            href="../Portafolio.pdf" 
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={ buttonStyle }
+          >
+            PORTFOLIO
+          </Button>
+          </Box>
+      </Container>
+      <Container>
+      {showFullText ? (
             <>
               <Typography variant="h6" align="left" color="#D9D9D9">
                 I'm Bruno Romero, a graduate of the SoyHenry Bootcamp in March 2023. I have experience in UX/UI Design
@@ -120,10 +158,51 @@ function About() {
               </Button>
             </>
           )}
-        </Box>
       </Container>
-    </>
+      <Container  sx={{marginBottom:'100px'}}>
+      <Typography variant='h5' color={'#fff'} sx={{marginTop:'40px', marginBottom:'20px'}}>
+          Skills
+      </Typography>
+      <Tags />
+      <Typography variant='h5' color={'#fff'} sx={{marginTop:'40px', marginBottom:'20px'}}>
+          Social Networks
+      </Typography>
+      <Container sx={mockup}>
+      <Stack direction="row" alignItems="center" justifyContent="space-around" width={'100%'}>
+      <Link href="https://www.linkedin.com/in/bruno-romero-685188255/" target="_blank" rel="noopener">
+        <Typography variant="h6" color="#fff" align='center'>
+          <LinkedInIcon style={icons} />
+          LinkedIn
+        </Typography>
+      </Link>
+      <Link href="https://github.com/Brunex7" target="_blank" rel="noopener">
+        <Typography variant="h6" color="#fff" align='center'>
+          <GitHubIcon style={icons} />
+          GitHub
+        </Typography>
+      </Link>
+      <Link href="mailto:brunoromero200@gmail.com" target="_blank" rel="noopener">
+        <Typography variant="h6" color="#fff" align='center'>
+          <EmailIcon style={icons} />
+          Email
+        </Typography>
+      </Link>
+    </Stack>
+      </Container>
+      </Container>
+    </Box>
+  </>
   );
 }
-
 export default About;
+
+// import { Box, Button, CardContent, Container, Typography } from '@mui/material';
+// import React, { useEffect} from 'react';
+
+
+// function Description() {
+
+ 
+// }
+
+// export default Description;

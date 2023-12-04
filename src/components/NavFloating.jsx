@@ -1,31 +1,22 @@
 import { Transition } from 'react-transition-group';
 import React, { useEffect, useState } from 'react';
 import { Box, Stack } from '@mui/material';
-import { Link as MuiLink } from '@mui/material';
 import { Link as ScrollLink } from 'react-scroll';
 import styled from 'styled-components';
 
-// import { Root } from '../assets/icons/logoRoot.svg';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import EmailIcon from '@mui/icons-material/Email';
-
-const socialIconStyles = {
-  color: '#000000',
-};
 
 const NavBox = styled(Box)`
+  width: 100%;
   position: fixed;
-  border-radius: 10px;
   left: 50%;
-  bottom: 1%;
+  top: 97%;
   transform: translate(-50%, -50%);
   z-index: 1;
   display: block;
-  background-color: #474747;
+  background-color: #002b17;
   padding: 6px;
   cursor: pointer;
   opacity: ${({ state }) => (state === 'entered' ? 1 : 0)};
@@ -37,15 +28,14 @@ const NavIcon = styled(Box)`
   transition: transform ${({ animationDuration }) => animationDuration}ms, background-color ${({ animationDuration }) => animationDuration}ms ease-in-out, border-radius ${({ animationDuration }) => animationDuration}ms ease-in-out, box-shadow ${({ animationDuration }) => animationDuration}ms ease-in-out;
 
   &:hover {
-    transform: scale(1.8);
-    background-color: #474747;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
   }
 `;
 
 const icons = {
-  fontSize:'32px'
+  fontSize:'32px',
+  color:'#fff'
 }
 
 const NavFloating = () => {
@@ -89,26 +79,6 @@ const NavFloating = () => {
                 <PersonIcon style={icons} />
               </NavIcon>
             </ScrollLink>
-            {/* <ScrollLink to="desing" className="link" smooth>
-              <NavIcon animationDuration={animationDuration}>
-                <Root  style={icons}/>
-              </NavIcon>
-            </ScrollLink> */}
-            <MuiLink href="https://www.linkedin.com/in/bruno-romero-685188255/" target="_blank" rel="noopener">
-              <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
-                <LinkedInIcon  style={icons} />
-              </NavIcon>
-            </MuiLink>
-            <MuiLink href="https://github.com/Brunex7" target="_blank" rel="noopener">
-              <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
-                <GitHubIcon  style={icons} />
-              </NavIcon>
-            </MuiLink>
-            <MuiLink href="mailto:brunoromero200@gmail.com" target="_blank" rel="noopener">
-              <NavIcon animationDuration={animationDuration} style={socialIconStyles}>
-                <EmailIcon style={icons} />
-              </NavIcon>
-            </MuiLink>
           </Stack>
         </NavBox>
       )}

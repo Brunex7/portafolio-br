@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
-import projects from '../media/project';
+import { Box, Button, Card, CardActionArea, CardContent, CardMedia, Container, Grid, Typography } from '@mui/material';
 import { useInView } from 'react-intersection-observer';
 
-const Projects = () => {
+const Projects = ({data, onClick}) => {
+  if(!data){
+    return null;
+  }
+  
+  const {id, image, description } = data;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,36 +34,24 @@ const Projects = () => {
     margin: '60px 0 60px 0',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center',
+    alignItems: 'stretch',
     padding: '0 10px 0 10px'
   };
 
   const descriptionStyle = {
     position: 'absolute',
     width: '90%',
-    marginTop:'-55px',
+    marginTop:'-70px',
     padding: '0 0 0 18px',
     textAlign: 'left',
     color: 'white',
     fontSize:'12px'
   };
 
-  const buttonStyle = {
-    backgroundColor: 'none',
-    width:'100%',
-    color: '#ffffff',
-    fontSize:'12px',
-    borderRadius:'5px',
-    '&:hover': {
-      backgroundColor: '#002b17',
-      color: '#ffffff',
-    },
-  };
-
   const imageContainerStyle = {
     position: 'relative',
     overflow: 'hidden',
-    borderRadius: ' 10px 10px 0 0',
+    borderRadius: ' 5px 5px 0 0',
   };
 
   const imageStyle = {
@@ -73,66 +65,33 @@ const Projects = () => {
     bottom: 0,
     left: 0,
     width: '100%',
-    height: '20%',
+    height: '100%',
     background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1))',
   };
-
-
-  const contButtom = {
-    display:'flex',
-    padding:'0',
-    alignItems:'center',
-    marginTop:'5px'
-  }
 
   return (
     <>
       <Box id ='project' sx={containerStyle}>
         <div ref={ref} >
-          <Grid container spacing={2}>
-            {projects.map((project, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4}>
                 <Card style={cardStyle}>
+                  <CardActionArea onClick={() => onClick(id)}>
                 <div style={imageContainerStyle}>
                   <CardMedia
                     style={imageStyle}
                     component="img"
-                    image={project.image}
+                    image={image}
                     alt="Project Image"
-                  />
+                    />
                   <div style={gradientStyle} />
-                </div>
                   <CardContent style={descriptionStyle}>
-                    <Typography variant="body4" color="white">
-                      {project.description}
+                    <Typography variant="h6" color="white">
+                      {description}
                     </Typography>
                   </CardContent>
-                  <CardActions sx={contButtom}>
-                  {project.deployLink && (
-                  <Button
-                  href={project.deployLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  sx={ buttonStyle }
-                  >
-                      view deploy
-                  </Button>
-                  )}
-                  {project.codeLink && (
-                    <Button
-                    href={project.codeLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    sx={ buttonStyle }
-                    >
-                      view code
-                    </Button>
-                  )}
-                  </CardActions>
+                </div>
+                  </CardActionArea>
                 </Card>
-              </Grid>
-            ))}
-          </Grid>
+
         </div>
     </Box>
     </>
