@@ -49,7 +49,6 @@ function Description({data, onClose}) {
 
   const mockupStyle ={
     width: '100%',
-    height:'700px',
     backgroundColor:'#3d3d3d',
     borderRadius:'20px',
     marginTop:'20px',
