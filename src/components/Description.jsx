@@ -102,7 +102,9 @@ function Description({data, onClose}) {
   <>
     <Box sx={boxcont}>
       <Button onClick={onClose} sx={buttonClose}> <ArrowBackIosIcon/> </Button>
-      <img src={image} alt={title} style={imgStyle} />
+      <CardContent>
+        <img src={image} alt={title} style={imgStyle} />
+      </CardContent>
       <Container sx={containerPrin} >
         <Box sx={boxone}>
           <Typography variant='h4' color={'#fff'} width={'600px'} >{title}</Typography>
