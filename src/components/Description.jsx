@@ -51,7 +51,7 @@ function Description({data, onClose}) {
     width: '100%',
     backgroundColor:'#3d3d3d',
     borderRadius:'20px',
-    marginTop:'20px',
+    margin:'20px 0 30px 0',
     objectFit:'cover'
   }
 
@@ -83,7 +83,7 @@ function Description({data, onClose}) {
     background: 'none',
     color: '#fff',
     fontSize:'12px',
-    borderRadius:'0px',
+    borderRadius:'0',
     '&:hover': {
       backgroundColor: '#002b17',
       color: '#ffffff',
@@ -92,7 +92,7 @@ function Description({data, onClose}) {
 
   const imgStyle = {
     width: '100%',
-    height: '400px',
+    height: '550px',
     objectFit: 'cover',
     display: 'flex',
   }
@@ -101,9 +101,7 @@ function Description({data, onClose}) {
   <>
     <Box sx={boxcont}>
       <Button onClick={onClose} sx={buttonClose}> <ArrowBackIosIcon/> </Button>
-      <CardContent>
         <img src={image} alt={title} style={imgStyle} />
-      </CardContent>
       <Container sx={containerPrin} >
         <Box sx={boxone}>
           <Typography variant='h4' color={'#fff'} width={'600px'} >{title}</Typography>
@@ -137,7 +135,9 @@ function Description({data, onClose}) {
         <Typography variant='h5' color={'#fff'} sx={{marginTop:'40px'}}>
           Mockup
         </Typography>
+        <CardContent>
           <img src={mockup} alt={title} style={mockupStyle}/>
+      </CardContent>
         <Typography variant='boby4' color={'#fff'} fontSize={'20px'}>
           {info}
         </Typography>

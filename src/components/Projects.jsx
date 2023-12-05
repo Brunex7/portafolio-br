@@ -56,7 +56,7 @@ const Projects = ({data, onClick}) => {
 
   const imageStyle = {
     width: '100%',
-    height: '400px',
+    height: '550px',
     objectFit: 'cover',
   };
 
