@@ -1,12 +1,12 @@
-import { Transition } from 'react-transition-group';
-import React, { useEffect, useState } from 'react';
-import { Box, Stack } from '@mui/material';
-import { Link as ScrollLink } from 'react-scroll';
-import styled from 'styled-components';
+import { Transition } from "react-transition-group";
+import React, { useEffect, useState } from "react";
+import { Box, Stack } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
+import styled from "styled-components";
 
-import HomeIcon from '@mui/icons-material/Home';
-import PersonIcon from '@mui/icons-material/Person';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
+import HomeIcon from "@mui/icons-material/Home";
+import PersonIcon from "@mui/icons-material/Person";
+import DesignServicesIcon from "@mui/icons-material/DesignServices";
 
 const NavBox = styled(Box)`
   width: 100%;
@@ -19,13 +19,18 @@ const NavBox = styled(Box)`
   background-color: #002b17;
   padding: 6px;
   cursor: pointer;
-  opacity: ${({ state }) => (state === 'entered' ? 1 : 0)};
-  transition: opacity ${({ animationDuration }) => animationDuration}ms ease-in-out;
+  opacity: ${({ state }) => (state === "entered" ? 1 : 0)};
+  transition: opacity ${({ animationDuration }) => animationDuration}ms
+    ease-in-out;
 `;
 
 const NavIcon = styled(Box)`
   font-size: 24px;
-  transition: transform ${({ animationDuration }) => animationDuration}ms, background-color ${({ animationDuration }) => animationDuration}ms ease-in-out, border-radius ${({ animationDuration }) => animationDuration}ms ease-in-out, box-shadow ${({ animationDuration }) => animationDuration}ms ease-in-out;
+  transition: transform ${({ animationDuration }) => animationDuration}ms,
+    background-color ${({ animationDuration }) => animationDuration}ms
+      ease-in-out,
+    border-radius ${({ animationDuration }) => animationDuration}ms ease-in-out,
+    box-shadow ${({ animationDuration }) => animationDuration}ms ease-in-out;
 
   &:hover {
     border-radius: 5px;
@@ -34,26 +39,28 @@ const NavIcon = styled(Box)`
 `;
 
 const icons = {
-  fontSize:'32px',
-  color:'#fff'
-}
+  fontSize: "32px",
+  color: "#fff",
+};
 
 const NavFloating = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    let prevScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+    let prevScrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop;
 
     const handleScroll = () => {
-      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+      const currentScrollPosition =
+        window.pageYOffset || document.documentElement.scrollTop;
       setIsVisible(currentScrollPosition > prevScrollPosition);
       prevScrollPosition = currentScrollPosition;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -61,9 +68,15 @@ const NavFloating = () => {
 
   return (
     <Transition in={isVisible} timeout={animationDuration}>
-      {state => (
+      {(state) => (
         <NavBox state={state} animationDuration={animationDuration}>
-          <Stack direction="row" spacing={2} justifyContent="space-around" alignItems="center" color={'#000000'}>
+          <Stack
+            direction="row"
+            spacing={2}
+            justifyContent="space-around"
+            alignItems="center"
+            color={"#000000"}
+          >
             <ScrollLink to="landing" className="link" smooth>
               <NavIcon animationDuration={animationDuration}>
                 <HomeIcon style={icons} />
